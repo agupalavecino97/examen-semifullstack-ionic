@@ -1,0 +1,26 @@
+
+<ion-card class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;" *ngIf="pokemon()"
+    [ngClass]="{'card-fire': type == 'fire',
+                'card-electric': type == 'electric',
+                'card-rock': type == 'rock',
+                'card-water': type == 'water', }">
+    <div class="advisor_thumb" 
+        [ngClass]="{'background-fire': type == 'fire',
+                    'background-electric': type == 'electric',
+                    'background-rock': type == 'rock',
+                    'background-water': type == 'water', }"
+    >
+        <img class="img-front" [src]="pokemon().sprites.front_default ? pokemon().sprites.front_default : 'assets/pokeball.png'" [alt]="pokemon().name">
+        <img class="img-back" [src]="pokemon().sprites.back_default ? pokemon().sprites.back_default : 'assets/pokeball.png'" [alt]="pokemon().name">
+    </div>
+    <div class="single_advisor_details_info" 
+        [ngClass]="{'after-fire': type == 'fire',
+                    'after-electric': type == 'electric',
+                    'after-rock': type == 'rock',
+                    'after-water': type == 'water', }"
+    >
+    <ion-text>
+        <h2>{{pokemon().name | titlecase}}</h2>
+      </ion-text>
+    </div>
+</ion-card>

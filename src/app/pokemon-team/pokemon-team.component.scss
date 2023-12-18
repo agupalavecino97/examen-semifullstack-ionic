@@ -1,0 +1,23 @@
+.container-cards {
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+}
+
+ion-refresher {
+    z-index: 10;
+}
+
+@media (max-width: 992px) {
+    .container-cards {
+        display: block !important;
+    }
+
+    h1 {
+        padding-left: 0.5em;
+        padding-top: 2em;
+    }
+
+}

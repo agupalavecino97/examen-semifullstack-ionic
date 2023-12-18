@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>Random Pokemon Team</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="onClickRefresh()">
+            <ion-icon slot="icon-only" name="reload"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding container-cards">
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+		<ion-refresher-content
+            pullingIcon="chevron-down-circle-outline"
+            refreshingSpinner="circles"
+            refreshingText="Actualizando..."
+        > </ion-refresher-content>
+	</ion-refresher>
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">Random Pokemon Team</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 p-3">
+            <app-pokemon-card 
+                *ngIf="chosenFirePokemon() != ''"
+                [type]="'fire'"
+                [pokemonId]="chosenFirePokemon()"> 
+            </app-pokemon-card>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 p-3">
+            <app-pokemon-card 
+                *ngIf="chosenWaterPokemon() != ''"
+                [type]="'water'"
+                [pokemonId]="chosenWaterPokemon()"> 
+            </app-pokemon-card>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 p-3">
+            <app-pokemon-card 
+                *ngIf="chosenElectricPokemon() != ''"
+                [type]="'electric'"
+                [pokemonId]="chosenElectricPokemon()"> 
+            </app-pokemon-card>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 p-3">
+            <app-pokemon-card 
+                 *ngIf="chosenRockPokemon() != ''"
+                [type]="'rock'"
+                [pokemonId]="chosenRockPokemon()"> 
+            </app-pokemon-card>
+        </div>
+       
+    </div>
+</ion-content>
+<app-footer></app-footer>
+ 

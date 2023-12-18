@@ -1,0 +1,213 @@
+.single_advisor_profile {
+    position: relative;
+    margin-bottom: 50px;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    z-index: 1;
+    border-radius: 15px;
+    -webkit-box-shadow: 1rem 1rem 1rem 1rem rgba(47, 91, 234, 0.125);
+    box-shadow: 1rem 01rem 1rem 1rem rgba(47, 91, 234, 0.125);
+}
+
+.single_advisor_profile .advisor_thumb {
+    z-index: 1;
+    border-radius: 15px 15px 0 0;
+    margin: 0 auto;
+    padding: 30px 30px 0 30px;
+    overflow: hidden;
+    height: 10rem;
+}
+
+.single_advisor_profile .advisor_thumb .img-front  {
+    height: 12rem;
+    width: 12rem;
+    position: absolute;
+    z-index: 2;
+    left: 0rem;
+    top: 0rem;
+} 
+
+.single_advisor_profile .advisor_thumb .img-back  {
+    height: 8rem;
+    width: 8rem;
+    position: absolute;
+    z-index: 10000;
+    right: 0rem;
+    top: 0rem;
+} 
+
+
+
+
+.background-fire {
+    background-color: #e72324;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+}
+
+.background-water {
+    background-color: #2481f0;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+
+}
+
+.background-electric {
+    background-color: #fac000;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+}
+
+.background-rock {
+    background-color: #b0ab82;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+}
+
+.single_advisor_profile .single_advisor_details_info {
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+    text-align: right;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    border-radius: 0 0 15px 15px;
+    background-color: #ffffff;
+}
+
+.after-fire::after {
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 3px;
+    content: "";
+    top: 12px;
+    right: 30px;
+    background-color: #e72324;
+}
+
+.after-water::after {
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 3px;
+    content: "";
+    top: 12px;
+    right: 30px;
+    background-color: #2481f0;
+}
+
+.after-electric::after {
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 3px;
+    content: "";
+    top: 12px;
+    right: 30px;
+    background-color: #fac000;
+}
+
+
+.after-rock::after {
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 3px;
+    content: "";
+    top: 12px;
+    right: 30px;
+    background-color: #b0ab82;
+}
+
+
+.single_advisor_profile .single_advisor_details_info h2 {
+    margin-bottom: 0.25rem;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    color: #000 !important;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .single_advisor_profile .single_advisor_details_info h2 {
+        font-size: 14px;
+    }
+}
+
+
+.card-fire:hover .advisor_thumb::after,
+.card-fire:focus .advisor_thumb::after {
+    background-color: #e72324;
+}
+
+.card-fire:hover .single_advisor_details_info,
+.card-fire:focus .single_advisor_details_info {
+    background-color: #e72324;
+}
+
+.card-fire:hover .background-fire,
+.card-fire:focus .background-fire {
+    background-color: #eee;
+}
+
+.card-water:hover .advisor_thumb::after,
+.card-water:focus .advisor_thumb::after {
+    background-color: #2481f0;
+}
+
+.card-water:hover .single_advisor_details_info,
+.card-water:focus .single_advisor_details_info {
+    background-color: #2481f0;
+}
+
+.card-water:hover .background-water,
+.card-water:focus .background-water {
+    background-color: #eee;
+}
+
+.card-electric:hover .advisor_thumb::after,
+.card-electric:focus .advisor_thumb::after {
+    background-color: #fac000;
+}
+
+.card-electric:hover .single_advisor_details_info,
+.card-electric:focus .single_advisor_details_info {
+    background-color: #fac000;
+}
+
+.card-electric:hover .background-electric,
+.card-electric:focus .background-electric {
+    background-color: #eee;
+}
+
+.card-rock:hover .advisor_thumb::after,
+.card-rock:focus .advisor_thumb::after {
+    background-color: #b0ab82;
+}
+
+.card-rock:hover .single_advisor_details_info,
+.card-rock:focus .single_advisor_details_info {
+    background-color: #b0ab82;
+}
+
+.card-rock:hover .background-rock,
+.card-rock:focus .background-rock {
+    background-color: #eee;
+}
+
+.single_advisor_profile:hover .single_advisor_details_info::after,
+.single_advisor_profile:focus .single_advisor_details_info::after {
+    background-color: #ffffff;
+}
+.single_advisor_profile:hover .single_advisor_details_info h2,
+.single_advisor_profile:focus .single_advisor_details_info h2 {
+    color: #ffffff !important;
+}
